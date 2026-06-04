@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0c1a22;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-ink shadow-soft transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-gold-300 focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-brand-700 px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-brand-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+  .btn-light {
+    @apply inline-flex items-center justify-center rounded-full bg-white/95 px-6 py-3 text-sm font-semibold text-brand-900 shadow-soft transition hover:bg-white;
+  }
+
+  /* Typography helpers */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-600;
+  }
+  .h-display {
+    @apply font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl;
+  }
+  .h-section {
+    @apply font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl;
+  }
+  .lead {
+    @apply text-lg leading-relaxed text-ink/70;
+  }
+
+  /* Cards */
+  .card-soft {
+    @apply rounded-2xl bg-white p-6 shadow-soft ring-1 ring-brand-900/5;
+  }
+}
