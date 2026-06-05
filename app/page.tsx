@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { ArrowRight, Star, ShieldCheck, MapPin, Phone, Check } from 'lucide-react';
 import { Section, SectionHeader } from '@/components/Section';
 import CTASection from '@/components/CTASection';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
+import VideoShowcase from '@/components/VideoShowcase';
+import Photo from '@/components/Photo';
 import { SERVICES, TESTIMONIALS, VALUE_PROPS, STATS, BUSINESS } from '@/lib/content';
 
 export default function HomePage() {
@@ -55,9 +56,12 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
-              <ImagePlaceholder
-                label="Hero photo — Clay's best lawn / landscape shot"
+              <Photo
+                src="/images/gallery/rodas-125.jpg"
+                alt="Stone retaining wall, fresh plantings and rock beds at golden hour"
                 aspect="aspect-[4/5]"
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
             <div className="absolute -bottom-5 -left-3 hidden rounded-2xl bg-white p-4 shadow-lift ring-1 ring-brand-900/5 sm:block">
@@ -123,8 +127,9 @@ export default function HomePage() {
       <section className="bg-cream py-20 sm:py-24">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
-            <ImagePlaceholder
-              label="Crew on-site / before-and-after photo"
+            <Photo
+              src="/images/gallery/rodas-050.jpg"
+              alt="Rodas Premier crew member mowing crisp stripes into a large lawn"
               aspect="aspect-[5/4]"
             />
           </div>
@@ -158,6 +163,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* VIDEO SHOWCASE */}
+      <VideoShowcase />
 
       {/* TESTIMONIALS */}
       <Section>

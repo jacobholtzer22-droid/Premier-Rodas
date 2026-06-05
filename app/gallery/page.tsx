@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Section } from '@/components/Section';
 import CTASection from '@/components/CTASection';
 import GalleryGrid from '@/components/GalleryGrid';
+import VideoShowcase from '@/components/VideoShowcase';
 import { GALLERY_IMAGES } from '@/lib/gallery';
 
 export const metadata: Metadata = {
@@ -27,6 +28,8 @@ export default function GalleryPage() {
       <Section>
         <GalleryGrid images={GALLERY_IMAGES} />
       </Section>
+
+      <VideoShowcase />
 
       <CTASection />
     </>

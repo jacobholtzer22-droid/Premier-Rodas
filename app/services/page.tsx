@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import { Section } from '@/components/Section';
 import CTASection from '@/components/CTASection';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
+import Photo from '@/components/Photo';
 import { SERVICES } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 </Link>
               </div>
               <div className={reversed ? 'lg:order-1' : ''}>
-                <ImagePlaceholder label={`${s.title} — Clay's photo`} aspect="aspect-[4/3]" />
+                <Photo src={s.image!} alt={s.imageAlt ?? s.title} aspect="aspect-[4/3]" />
               </div>
             </div>
           </Section>

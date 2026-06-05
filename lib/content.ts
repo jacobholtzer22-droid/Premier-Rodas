@@ -56,8 +56,8 @@ export const SERVICES: Service[] = [
       'Precision mowing, edging, and seasonal upkeep that keeps your property sharp all season long.',
     long: 'We specialize in creating and maintaining beautiful lawns that elevate the look of your home or business. From precision mowing and crisp edging to debris removal and customized care plans, every visit leaves your yard looking pristine — treated like it was our own.',
     icon: Scissors,
-    image: '/work/lawn-care.jpg',
-    imageAlt: 'Freshly mowed residential lawn with crisp edging',
+    image: '/images/gallery/rodas-040.jpg',
+    imageAlt: 'Large backyard lawn freshly mowed with crisp, professional stripes',
     features: [
       'Precision mowing for a clean, even cut',
       'Trimming & edging for sharp, professional lines',
@@ -73,8 +73,8 @@ export const SERVICES: Service[] = [
       'Design, planting, pruning, and seasonal cleanup to make your outdoor space look amazing.',
     long: 'From fresh garden beds to full property refreshes, our landscaping brings structure and beauty to your outdoor space. We handle design, planting, pruning, mulching, and seasonal cleanups — building landscapes that look incredible today and grow more beautiful over time.',
     icon: Leaf,
-    image: '/work/landscaping.jpg',
-    imageAlt: 'Professionally landscaped garden bed with fresh mulch and plantings',
+    image: '/images/gallery/rodas-115.jpg',
+    imageAlt: 'Landscape construction in progress with new rock beds and plantings at golden hour',
     features: [
       'Landscape design & installation',
       'Planting — trees, shrubs & perennials',
@@ -90,8 +90,8 @@ export const SERVICES: Service[] = [
       'Efficient, reliable snow plowing and de-icing to keep your property safe all winter.',
     long: 'When the snow falls, we show up. Our efficient and reliable snow plowing and de-icing services keep your driveways, walkways, and lots clear and safe through every Michigan winter — with the dependable communication you can plan around.',
     icon: Snowflake,
-    image: '/work/snow-removal.jpg',
-    imageAlt: 'Plowed driveway cleared of snow during a Michigan winter',
+    image: '/images/gallery/rodas-065.jpg',
+    imageAlt: 'Pristine, healthy lawn on a maintained property under a clear blue sky',
     features: [
       'Residential driveway plowing',
       'Commercial lot clearing',

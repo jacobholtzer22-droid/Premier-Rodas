@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
 import { Section, SectionHeader } from '@/components/Section';
 import CTASection from '@/components/CTASection';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
+import Photo from '@/components/Photo';
 import { ABOUT_HIGHLIGHTS, BUSINESS } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -51,7 +51,11 @@ export default function AboutPage() {
             </Link>
           </div>
           <div>
-            <ImagePlaceholder label="Owner / crew photo — Clay's photo" aspect="aspect-[4/5]" />
+            <Photo
+              src="/images/gallery/rodas-025.jpg"
+              alt="American flag over a freshly maintained lawn and landscaped bed at sunrise"
+              aspect="aspect-[4/5]"
+            />
           </div>
         </div>
       </Section>
