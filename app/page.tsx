@@ -57,8 +57,8 @@ export default function HomePage() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
               <Photo
-                src="/images/gallery/rodas-125.jpg"
-                alt="Stone retaining wall, fresh plantings and rock beds at golden hour"
+                src="/images/gallery/rodas-070.jpg"
+                alt="Commercial-grade stand-on mower cutting crisp stripes across a large open property"
                 aspect="aspect-[4/5]"
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"

@@ -56,8 +56,8 @@ export const SERVICES: Service[] = [
       'Precision mowing, edging, and seasonal upkeep that keeps your property sharp all season long.',
     long: 'We specialize in creating and maintaining beautiful lawns that elevate the look of your home or business. From precision mowing and crisp edging to debris removal and customized care plans, every visit leaves your yard looking pristine — treated like it was our own.',
     icon: Scissors,
-    image: '/images/gallery/rodas-040.jpg',
-    imageAlt: 'Large backyard lawn freshly mowed with crisp, professional stripes',
+    image: '/images/gallery/rodas-045.jpg',
+    imageAlt: 'Commercial stand-on mower on a large striped lawn in front of an office building',
     features: [
       'Precision mowing for a clean, even cut',
       'Trimming & edging for sharp, professional lines',
