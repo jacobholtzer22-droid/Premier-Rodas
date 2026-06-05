@@ -24,39 +24,39 @@ export default function Footer() {
             {BUSINESS.blurb} Locally owned and operated, proudly serving Grand Rapids and the
             surrounding West Michigan communities.
           </p>
-          <div className="mt-6 space-y-2.5 text-sm text-brand-100/80">
-            <a href={BUSINESS.phoneHref} className="flex items-center gap-2.5 hover:text-white">
-              <Phone className="h-4 w-4 text-gold-300" /> {BUSINESS.phone}
+          <div className="mt-4 space-y-1 text-sm text-brand-100/80">
+            <a href={BUSINESS.phoneHref} className="flex min-h-[44px] items-center gap-2.5 hover:text-white">
+              <Phone className="h-4 w-4 flex-shrink-0 text-gold-300" /> {BUSINESS.phone}
             </a>
-            <a href={BUSINESS.emailHref} className="flex items-center gap-2.5 hover:text-white">
-              <Mail className="h-4 w-4 text-gold-300" /> {BUSINESS.email}
+            <a href={BUSINESS.emailHref} className="flex min-h-[44px] items-center gap-2.5 break-all hover:text-white">
+              <Mail className="h-4 w-4 flex-shrink-0 text-gold-300" /> {BUSINESS.email}
             </a>
-            <div className="flex items-center gap-2.5">
-              <MapPin className="h-4 w-4 text-gold-300" /> {BUSINESS.area}
+            <div className="flex min-h-[44px] items-center gap-2.5">
+              <MapPin className="h-4 w-4 flex-shrink-0 text-gold-300" /> {BUSINESS.area}
             </div>
-            <div className="flex items-center gap-2.5">
-              <Clock className="h-4 w-4 text-gold-300" /> {BUSINESS.hours}
+            <div className="flex min-h-[44px] items-center gap-2.5">
+              <Clock className="h-4 w-4 flex-shrink-0 text-gold-300" /> {BUSINESS.hours}
             </div>
           </div>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Services</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-brand-100/70">
-            <li><Link href="/services#lawn-care" className="hover:text-white">Lawn Care</Link></li>
-            <li><Link href="/services#landscaping" className="hover:text-white">Landscaping</Link></li>
-            <li><Link href="/services#snow-removal" className="hover:text-white">Snow Removal</Link></li>
-            <li><Link href="/gallery" className="hover:text-white">Our Work</Link></li>
-            <li><Link href="/contact" className="hover:text-white">Get a Free Quote</Link></li>
+          <ul className="mt-2 text-sm text-brand-100/70">
+            <li><Link href="/services#lawn-care" className="flex min-h-[44px] items-center hover:text-white">Lawn Care</Link></li>
+            <li><Link href="/services#landscaping" className="flex min-h-[44px] items-center hover:text-white">Landscaping</Link></li>
+            <li><Link href="/services#snow-removal" className="flex min-h-[44px] items-center hover:text-white">Snow Removal</Link></li>
+            <li><Link href="/gallery" className="flex min-h-[44px] items-center hover:text-white">Our Work</Link></li>
+            <li><Link href="/contact" className="flex min-h-[44px] items-center hover:text-white">Get a Free Quote</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Service Area</h3>
-          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm text-brand-100/70">
+          <ul className="mt-2 grid grid-cols-2 gap-x-4 text-sm text-brand-100/70">
             {SERVICE_AREAS.map((c) => (
               <li key={c}>
-                <Link href="/service-area" className="hover:text-white">{c}</Link>
+                <Link href="/service-area" className="flex min-h-[44px] items-center hover:text-white">{c}</Link>
               </li>
             ))}
           </ul>
@@ -66,9 +66,9 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs text-brand-100/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.</p>
-          <p>
-            Site by{' '}
-            <a href="https://www.alignandacquire.com" className="hover:text-white">
+          <p className="inline-flex min-h-[44px] items-center">
+            Site by{' '}
+            <a href="https://www.alignandacquire.com" className="underline-offset-2 hover:text-white hover:underline">
               Align and Acquire
             </a>
           </p>

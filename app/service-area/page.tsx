@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { MapPin, Phone, ArrowRight } from 'lucide-react';
 import { Section } from '@/components/Section';
 import CTASection from '@/components/CTASection';
+import PageHero from '@/components/PageHero';
 import { SERVICE_AREAS, BUSINESS } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -14,31 +15,25 @@ export const metadata: Metadata = {
 export default function ServiceAreaPage() {
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white sm:py-24">
-        <div className="container-page max-w-3xl">
-          <p className="eyebrow !text-gold-300">Service area</p>
-          <h1 className="h-display mt-3 !text-white">Proudly serving West Michigan.</h1>
-          <p className="lead mt-5 !text-brand-50/80">
-            Based in the Grand Rapids area, we serve homeowners and businesses across the
-            surrounding communities. Don&apos;t see your town? Reach out — we&apos;re often able to
-            help nearby.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Service area"
+        title="Proudly serving West Michigan."
+        description="Based in the Grand Rapids area, we serve homeowners and businesses across the surrounding communities. Don't see your town? Reach out — we're often able to help nearby."
+      />
 
       <Section>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_AREAS.map((c) => (
             <div
               key={c}
-              className="flex items-center gap-3 rounded-2xl bg-cream px-5 py-4 ring-1 ring-brand-900/5 transition hover:ring-brand-200"
+              className="flex items-center gap-3 rounded-2xl bg-cream px-5 py-4 ring-1 ring-brand-900/5 transition hover:-translate-y-0.5 hover:ring-brand-200 hover:shadow-soft"
             >
               <span className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-brand-gradient text-white">
                 <MapPin className="h-5 w-5" />
               </span>
               <div>
                 <p className="font-semibold text-ink">{c}, MI</p>
-                <p className="text-xs text-ink/55">Lawn · Landscaping · Snow</p>
+                <p className="text-xs text-ink/60">Lawn · Landscaping · Snow</p>
               </div>
             </div>
           ))}

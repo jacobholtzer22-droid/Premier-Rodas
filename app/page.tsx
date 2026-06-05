@@ -34,11 +34,11 @@ export default function HomePage() {
               of your property in every season — delivered by a local crew that treats your yard
               like its own.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-gold">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link href="/contact" className="btn-gold w-full sm:w-auto">
                 Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <a href={BUSINESS.phoneHref} className="btn-light">
+              <a href={BUSINESS.phoneHref} className="btn-light w-full sm:w-auto">
                 <Phone className="mr-2 h-4 w-4" /> {BUSINESS.phone}
               </a>
             </div>
@@ -124,7 +124,7 @@ export default function HomePage() {
       </Section>
 
       {/* WHY US */}
-      <section className="bg-cream py-20 sm:py-24">
+      <section className="bg-cream py-16 sm:py-24">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <Photo
@@ -176,7 +176,7 @@ export default function HomePage() {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
-            <figure key={i} className="card-soft flex flex-col">
+            <figure key={i} className="card-soft flex flex-col transition hover:-translate-y-1 hover:shadow-lift">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} className="h-4 w-4 fill-gold-400 text-gold-400" />

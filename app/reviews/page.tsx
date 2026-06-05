@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Star, Quote } from 'lucide-react';
 import { Section } from '@/components/Section';
 import CTASection from '@/components/CTASection';
+import PageHero from '@/components/PageHero';
 import { TESTIMONIALS, BUSINESS } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -13,27 +14,23 @@ export const metadata: Metadata = {
 export default function ReviewsPage() {
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white sm:py-24">
-        <div className="container-page max-w-3xl">
-          <p className="eyebrow !text-gold-300">Reviews</p>
-          <h1 className="h-display mt-3 !text-white">What our customers say.</h1>
-          <div className="mt-6 flex items-center gap-3">
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-gold-400 text-gold-400" />
-              ))}
-            </div>
-            <span className="text-sm font-medium text-brand-50/80">
-              5.0 average rating from happy West Michigan homeowners
-            </span>
+      <PageHero eyebrow="Reviews" title="What our customers say.">
+        <div className="mt-6 flex items-center gap-3">
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-5 w-5 fill-gold-400 text-gold-400" />
+            ))}
           </div>
+          <span className="text-sm font-medium text-brand-50/80">
+            5.0 average rating from happy West Michigan homeowners
+          </span>
         </div>
-      </section>
+      </PageHero>
 
       <Section>
         <div className="grid gap-6 md:grid-cols-2">
           {TESTIMONIALS.map((t, i) => (
-            <figure key={i} className="card-soft relative flex flex-col">
+            <figure key={i} className="card-soft relative flex flex-col transition hover:-translate-y-1 hover:shadow-lift">
               <Quote className="h-8 w-8 text-brand-100" />
               <div className="mt-2 flex items-center gap-1">
                 {[...Array(5)].map((_, j) => (

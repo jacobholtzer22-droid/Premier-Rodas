@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import PageHero from '@/components/PageHero';
 import { BUSINESS } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -12,18 +13,13 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white sm:py-24">
-        <div className="container-page max-w-3xl">
-          <p className="eyebrow !text-gold-300">Contact</p>
-          <h1 className="h-display mt-3 !text-white">Let&apos;s get you a free quote.</h1>
-          <p className="lead mt-5 !text-brand-50/80">
-            Tell us about your property and what you need. We usually respond the same day —
-            and there&apos;s never any obligation.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's get you a free quote."
+        description="Tell us about your property and what you need. We usually respond the same day — and there's never any obligation."
+      />
 
-      <section className="py-20 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="container-page grid gap-12 lg:grid-cols-5 lg:items-start">
           {/* Details */}
           <div className="lg:col-span-2">
@@ -77,7 +73,7 @@ function ContactRow({
         <Icon className="h-5 w-5" />
       </span>
       <span>
-        <span className="block text-xs font-medium uppercase tracking-wider text-ink/45">
+        <span className="block text-xs font-semibold uppercase tracking-wider text-ink/55">
           {label}
         </span>
         <span className="mt-0.5 block font-medium text-ink">{value}</span>

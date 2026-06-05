@@ -42,7 +42,7 @@ export default function GalleryGrid({ images }: { images: string[] }) {
             <Plus className="mr-2 h-4 w-4" />
             Load more photos
           </button>
-          <p className="text-sm text-ink/55">
+          <p className="text-sm text-ink/60">
             Showing {visible} of {images.length}
           </p>
         </div>

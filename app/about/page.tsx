@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
 import { Section, SectionHeader } from '@/components/Section';
 import CTASection from '@/components/CTASection';
+import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import { ABOUT_HIGHLIGHTS, BUSINESS } from '@/lib/content';
 
@@ -15,17 +16,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white sm:py-24">
-        <div className="container-page max-w-3xl">
-          <p className="eyebrow !text-gold-300">About us</p>
-          <h1 className="h-display mt-3 !text-white">{BUSINESS.tagline}.</h1>
-          <p className="lead mt-5 !text-brand-50/80">
-            Rodas Premier Landscaping is a locally owned, owner-operated company built on a simple
-            idea: treat every property like it&apos;s our own. That mindset shows up in the crisp
-            lines, the thorough cleanups, and the way we communicate on every job.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About us"
+        title={`${BUSINESS.tagline}.`}
+        description="Rodas Premier Landscaping is a locally owned, owner-operated company built on a simple idea: treat every property like it's our own. That mindset shows up in the crisp lines, the thorough cleanups, and the way we communicate on every job."
+      />
 
       {/* STORY */}
       <Section>
@@ -61,7 +56,7 @@ export default function AboutPage() {
       </Section>
 
       {/* HIGHLIGHTS */}
-      <section className="bg-cream py-20 sm:py-24">
+      <section className="bg-cream py-16 sm:py-24">
         <div className="container-page">
           <SectionHeader
             eyebrow="What sets us apart"
@@ -72,7 +67,7 @@ export default function AboutPage() {
             {ABOUT_HIGHLIGHTS.map((h) => {
               const Icon = h.icon;
               return (
-                <div key={h.title} className="card-soft">
+                <div key={h.title} className="card-soft transition hover:-translate-y-1 hover:shadow-lift">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-gradient text-white">
                     <Icon className="h-6 w-6" />
                   </div>

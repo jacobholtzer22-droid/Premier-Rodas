@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { BUSINESS } from '@/lib/content';
@@ -18,6 +19,9 @@ const NAV_LINKS = [
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-900/5 bg-white/85 backdrop-blur-md">
@@ -44,7 +48,10 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-ink/70 transition hover:text-brand-700"
+              aria-current={isActive(l.href) ? 'page' : undefined}
+              className={`text-sm font-medium transition hover:text-brand-700 ${
+                isActive(l.href) ? 'text-brand-700' : 'text-ink/70'
+              }`}
             >
               {l.label}
             </Link>
@@ -82,7 +89,12 @@ export default function NavBar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink/80 hover:bg-brand-50 hover:text-brand-700"
+                aria-current={isActive(l.href) ? 'page' : undefined}
+                className={`flex min-h-[48px] items-center rounded-lg px-3 text-base font-medium transition hover:bg-brand-50 ${
+                  isActive(l.href)
+                    ? 'bg-brand-50 text-brand-700'
+                    : 'text-ink/80 hover:text-brand-700'
+                }`}
               >
                 {l.label}
               </Link>

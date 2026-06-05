@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import { Section } from '@/components/Section';
 import CTASection from '@/components/CTASection';
+import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import { SERVICES } from '@/lib/content';
 
@@ -15,19 +16,11 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      {/* HEADER */}
-      <section className="bg-brand-950 py-20 text-white sm:py-24">
-        <div className="container-page max-w-3xl">
-          <p className="eyebrow !text-gold-300">Our services</p>
-          <h1 className="h-display mt-3 !text-white">
-            Premium care for every season.
-          </h1>
-          <p className="lead mt-5 !text-brand-50/80">
-            One trusted, local crew for the work that keeps your property looking its best —
-            spring, summer, fall, and through every Michigan winter.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our services"
+        title="Premium care for every season."
+        description="One trusted, local crew for the work that keeps your property looking its best — spring, summer, fall, and through every Michigan winter."
+      />
 
       {/* SERVICE BLOCKS */}
       {SERVICES.map((s, i) => {

@@ -18,23 +18,56 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Remove the 300ms tap delay and double-tap zoom on interactive elements */
+a,
+button,
+[role='button'],
+input,
+select,
+textarea,
+label {
+  touch-action: manipulation;
+}
+
+/* Keyboard focus affordance for links (buttons define their own focus ring) */
+a:focus-visible {
+  outline: none;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0aa7d0;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @layer components {
   .container-page {
     @apply mx-auto w-full max-w-container px-5 sm:px-8;
   }
 
-  /* Buttons */
+  /* Buttons — min-h-[44px] guarantees a comfortable tap target everywhere */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-800 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2;
   }
   .btn-gold {
-    @apply inline-flex items-center justify-center rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-ink shadow-soft transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-gold-300 focus:ring-offset-2;
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-ink shadow-soft transition hover:brightness-105 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border border-brand-700 px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-brand-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full border border-brand-700 px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-brand-700 hover:text-white active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2;
   }
   .btn-light {
-    @apply inline-flex items-center justify-center rounded-full bg-white/95 px-6 py-3 text-sm font-semibold text-brand-900 shadow-soft transition hover:bg-white;
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full bg-white/95 px-6 py-3 text-sm font-semibold text-brand-900 shadow-soft transition hover:bg-white active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900;
   }
 
   /* Typography helpers */

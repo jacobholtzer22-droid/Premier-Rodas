@@ -4,7 +4,7 @@ import { BUSINESS } from '@/lib/content';
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-brand-900 py-20 text-white">
+    <section className="relative overflow-hidden bg-brand-900 py-16 text-white sm:py-20">
       <div
         className="pointer-events-none absolute inset-0 opacity-25"
         style={{
@@ -20,13 +20,13 @@ export default function CTASection() {
           removal, we&apos;re ready to help. Reach out for a free quote — we usually respond the
           same day.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Link href="/contact" className="btn-gold">
+        <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+          <Link href="/contact" className="btn-gold w-full sm:w-auto">
             Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <a
             href={BUSINESS.phoneHref}
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
           >
             <Phone className="h-4 w-4" /> {BUSINESS.phone}
           </a>
