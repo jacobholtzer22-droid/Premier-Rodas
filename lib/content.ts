@@ -205,18 +205,7 @@ export const ABOUT_HIGHLIGHTS: { title: string; body: string; icon: LucideIcon }
 ];
 
 /* ---------------------------------------------------------------- */
-/*  Gallery placeholders — swap labels with real photo filenames     */
-/*  once Clay provides his own job photos (drop into /public/work).  */
+/*  Gallery — real job photos live in the generated manifest at       */
+/*  lib/gallery.ts (GALLERY_IMAGES). Optimized files: public/images/   */
+/*  gallery/. Regenerate the manifest after adding/removing photos.    */
 /* ---------------------------------------------------------------- */
-
-export const GALLERY: { label: string; category: string }[] = [
-  { label: 'Freshly striped lawn', category: 'Lawn Care' },
-  { label: 'Garden bed install', category: 'Landscaping' },
-  { label: 'Edging detail', category: 'Lawn Care' },
-  { label: 'Mulch refresh', category: 'Landscaping' },
-  { label: 'Plowed driveway', category: 'Snow Removal' },
-  { label: 'Shrub trimming', category: 'Lawn Care' },
-  { label: 'Front-yard makeover', category: 'Landscaping' },
-  { label: 'Walkway cleared', category: 'Snow Removal' },
-  { label: 'Seasonal cleanup', category: 'Lawn Care' },
-];
