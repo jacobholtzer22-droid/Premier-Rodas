@@ -14,12 +14,46 @@ const SERVICE_OPTIONS = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // No backend wired up yet — purely client-side for the demo.
-    // Hook this up to an endpoint (or the Align & Acquire lead API) later.
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const payload = {
+      firstName: (data.get('firstName') as string) || '',
+      lastName: (data.get('lastName') as string) || '',
+      phone: (data.get('phone') as string) || '',
+      email: (data.get('email') as string) || '',
+      service: (data.get('service') as string) || '',
+      message: (data.get('message') as string) || '',
+      smsConsent: data.get('smsConsent') === 'on',
+    };
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setError(result.error || 'Something went wrong. Please try again or call us.');
+        setLoading(false);
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -101,8 +135,18 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <button type="submit" className="btn-primary mt-6 w-full sm:w-auto">
-        Send message <Send className="ml-2 h-4 w-4" />
+      {error && (
+        <p className="mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {error}
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="btn-primary mt-6 w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+      >
+        {loading ? 'Sending…' : 'Send message'} <Send className="ml-2 h-4 w-4" />
       </button>
     </form>
   );
