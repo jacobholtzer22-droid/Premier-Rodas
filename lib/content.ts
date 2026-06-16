@@ -73,8 +73,8 @@ export const SERVICES: Service[] = [
       'Design, planting, pruning, and seasonal cleanup to make your outdoor space look amazing.',
     long: 'From fresh garden beds to full property refreshes, our landscaping brings structure and beauty to your outdoor space. We handle design, planting, pruning, mulching, and seasonal cleanups — building landscapes that look incredible today and grow more beautiful over time.',
     icon: Leaf,
-    image: '/images/gallery/rodas-115.jpg',
-    imageAlt: 'Landscape construction in progress with new rock beds and plantings at golden hour',
+    image: '/images/gallery/rodas-124.jpg',
+    imageAlt: 'Freshly mulched garden bed with a feature tree and ornamental grasses along a curved walkway',
     features: [
       'Landscape design & installation',
       'Planting — trees, shrubs & perennials',
