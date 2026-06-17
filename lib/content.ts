@@ -90,8 +90,8 @@ export const SERVICES: Service[] = [
       'Efficient, reliable snow plowing and de-icing to keep your property safe all winter.',
     long: 'When the snow falls, we show up. Our efficient and reliable snow plowing and de-icing services keep your driveways, walkways, and lots clear and safe through every Michigan winter — with the dependable communication you can plan around.',
     icon: Snowflake,
-    image: '/images/gallery/rodas-099.jpg',
-    imageAlt: 'Crew member de-icing a snow-covered sidewalk next to a plow truck during a Michigan winter',
+    image: '/images/gallery/rodas-106.jpg',
+    imageAlt: 'Rodas Premier plow truck with the plow blade down, clearing a commercial parking lot at dusk after a Michigan snowfall',
     features: [
       'Residential driveway plowing',
       'Commercial lot clearing',

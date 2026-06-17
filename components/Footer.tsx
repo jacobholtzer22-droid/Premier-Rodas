@@ -67,8 +67,13 @@ export default function Footer() {
         <div className="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs text-brand-100/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.</p>
           <p className="inline-flex min-h-[44px] items-center">
-            Site by{' '}
-            <a href="https://www.alignandacquire.com" className="underline-offset-2 hover:text-white hover:underline">
+            Done by{' '}
+            <a
+              href="https://www.alignandacquire.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 underline-offset-2 hover:text-white hover:underline"
+            >
               Align and Acquire
             </a>
           </p>
