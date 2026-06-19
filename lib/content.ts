@@ -167,14 +167,11 @@ export const TESTIMONIALS = [
 
 export const SERVICE_AREAS = [
   'Grand Rapids',
+  'East Grand Rapids',
   'Walker',
-  'Jenison',
-  'Hudsonville',
-  'Plainfield',
-  'Ada',
-  'Rockford',
   'Wyoming',
-  'Kentwood',
+  'Plainfield',
+  'Rockford',
 ];
 
 /* ---------------------------------------------------------------- */

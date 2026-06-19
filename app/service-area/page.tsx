@@ -9,7 +9,7 @@ import { SERVICE_AREAS, BUSINESS } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Service Area | Rodas Premier Landscaping — Grand Rapids & West Michigan',
   description:
-    'Rodas Premier Landscaping proudly serves Grand Rapids, Walker, Jenison, Hudsonville, Plainfield, Ada, Rockford, Wyoming, and Kentwood, MI.',
+    'Rodas Premier Landscaping proudly serves Grand Rapids, East Grand Rapids, Walker, Wyoming, Plainfield, and Rockford, MI, and the surrounding areas.',
 };
 
 export default function ServiceAreaPage() {

@@ -5,7 +5,7 @@ import { Section, SectionHeader } from '@/components/Section';
 import CTASection from '@/components/CTASection';
 import VideoShowcase from '@/components/VideoShowcase';
 import Photo from '@/components/Photo';
-import { SERVICES, TESTIMONIALS, VALUE_PROPS, STATS, BUSINESS } from '@/lib/content';
+import { SERVICES, TESTIMONIALS, VALUE_PROPS, STATS, SERVICE_AREAS, BUSINESS } from '@/lib/content';
 
 export default function HomePage() {
   return (
@@ -204,16 +204,17 @@ export default function HomePage() {
           </div>
           <h2 className="h-section !text-white">Serving Grand Rapids &amp; the surrounding communities</h2>
           <div className="flex flex-wrap items-center justify-center gap-2.5">
-            {['Grand Rapids', 'Walker', 'Jenison', 'Hudsonville', 'Plainfield', 'Ada', 'Rockford', 'Wyoming', 'Kentwood'].map(
-              (c) => (
-                <span
-                  key={c}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-medium ring-1 ring-white/15"
-                >
-                  <Check className="h-3.5 w-3.5 text-gold-300" /> {c}
-                </span>
-              ),
-            )}
+            {SERVICE_AREAS.map((c) => (
+              <span
+                key={c}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-medium ring-1 ring-white/15"
+              >
+                <Check className="h-3.5 w-3.5 text-gold-300" /> {c}
+              </span>
+            ))}
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-medium ring-1 ring-white/15">
+              <Check className="h-3.5 w-3.5 text-gold-300" /> &amp; surrounding areas
+            </span>
           </div>
           <Link href="/service-area" className="btn-light mt-2">
             See your area
