@@ -1,17 +1,13 @@
 // AUTO-GENERATED — do not edit by hand.
 // Regenerate after adding/removing files in public/images/gallery/.
 // Source: Clay's job photos, optimized to 1400px / ~360KB each.
-// Curated showcase: trimmed from 175 to 44 to remove near-duplicate / look-alike shots.
 
 export const GALLERY_IMAGES: string[] = [
   '/images/gallery/rodas-001.jpg',
   '/images/gallery/rodas-002.jpg',
-  '/images/gallery/rodas-006.jpg',
-  '/images/gallery/rodas-009.jpg',
   '/images/gallery/rodas-015.jpg',
   '/images/gallery/rodas-018.jpg',
   '/images/gallery/rodas-025.jpg',
-  '/images/gallery/rodas-031.jpg',
   '/images/gallery/rodas-033.jpg',
   '/images/gallery/rodas-035.jpg',
   '/images/gallery/rodas-040.jpg',
@@ -21,13 +17,9 @@ export const GALLERY_IMAGES: string[] = [
   '/images/gallery/rodas-061.jpg',
   '/images/gallery/rodas-065.jpg',
   '/images/gallery/rodas-070.jpg',
-  '/images/gallery/rodas-086.jpg',
   '/images/gallery/rodas-099.jpg',
-  '/images/gallery/rodas-100.jpg',
   '/images/gallery/rodas-101.jpg',
   '/images/gallery/rodas-106.jpg',
-  '/images/gallery/rodas-108.jpg',
-  '/images/gallery/rodas-109.jpg',
   '/images/gallery/rodas-115.jpg',
   '/images/gallery/rodas-118.jpg',
   '/images/gallery/rodas-121.jpg',
