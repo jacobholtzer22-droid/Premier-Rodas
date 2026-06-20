@@ -38,8 +38,6 @@ export const GALLERY_IMAGES: string[] = [
   '/images/gallery/rodas-166.jpg',
   '/images/gallery/rodas-167.jpg',
   '/images/gallery/rodas-171.jpg',
-  '/images/gallery/rodas-173.jpg',
-  '/images/gallery/rodas-174.jpg',
   '/images/gallery/rodas-277.jpg',
 ];
 
