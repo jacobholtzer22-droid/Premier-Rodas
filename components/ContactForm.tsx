@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { BUSINESS } from '@/lib/content';
+import { trackFormConversion } from '@/lib/analytics';
 
 const SERVICE_OPTIONS = [
   'Lawn Care',
@@ -16,6 +17,8 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  // Ensures the Google Ads form conversion fires at most once per submission.
+  const conversionFired = useRef(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,6 +50,13 @@ export default function ContactForm() {
         setError(result.error || 'Something went wrong. Please try again or call us.');
         setLoading(false);
         return;
+      }
+
+      // Success: client validation passed (required fields) AND backend accepted.
+      // Fire the Google Ads form conversion exactly once.
+      if (!conversionFired.current) {
+        conversionFired.current = true;
+        trackFormConversion();
       }
 
       setSubmitted(true);
