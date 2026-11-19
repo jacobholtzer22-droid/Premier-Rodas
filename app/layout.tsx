@@ -36,6 +36,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${garamond.variable}`}>
+      <head>
+        <script defer src="https://www.alignandacquire.com/t/s/rodas-premier-lawn-snow-services-1780267646381.js"></script>
+      </head>
       <body className="bg-white font-sans text-ink">
         {/* Google Ads base tag (gtag) — loaded once, site-wide */}
         <Script

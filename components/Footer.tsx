@@ -66,6 +66,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs text-brand-100/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.</p>
+          <p className="inline-flex min-h-[44px] flex-wrap items-center justify-center gap-x-3">
+            <Link href="/privacy" className="hover:text-white hover:underline">Privacy</Link>
+            <a href="#" data-aa-cookie-settings hidden className="hover:text-white hover:underline">Cookie settings</a>
+          </p>
           <p className="inline-flex min-h-[44px] items-center">
             Done by{' '}
             <a
